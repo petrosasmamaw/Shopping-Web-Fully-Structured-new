@@ -11,7 +11,7 @@ const NavBar = ({ user, setUser }) => {
   return (
     <header className="navbar">
       <div className='left-navbar'>
-        <h1>Peter-Shop</h1>
+        <h1>Gebeya.net</h1>
       </div>
 
       <div className='right-navbar'>
@@ -24,6 +24,7 @@ const NavBar = ({ user, setUser }) => {
               <li>
                 <button onClick={handleLogout}>Logout</button>
               </li>
+              <li><Link to="/profile">Profile</Link></li>
             </>
           ) : (
             <>

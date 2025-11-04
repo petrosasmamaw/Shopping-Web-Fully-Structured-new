@@ -9,6 +9,7 @@ import ProductsDetail from "./components/product/ProductsDetail.jsx";
 import Cart from "./components/cart/Cart.jsx";
 import Login from "./components/auth/Login.jsx";
 import Register from "./components/auth/Register.jsx";
+import Profile from "./components/product/Profile.jsx";
 
 import { supabase } from "./supabase/supabaseClient.js";
 import { fetchCartFromSupabase, setCart, selectCartItems, syncCartToSupabase } from "./slices/cartSlice";
@@ -58,6 +59,7 @@ const App = () => {
       <NavBar user={user} setUser={setUser} />
       <Routes>
         <Route path="/" element={<ProductsList />} />
+        <Route path="/profile" element={<Profile user={user} />} />
         <Route path="/products/:id" element={<ProductsDetail user={user} />} />
         <Route path="/cart" element={<Cart user={user} />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
